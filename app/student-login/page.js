@@ -1,10 +1,24 @@
 "use client";
+import Image from "next/image";
 
 export default function StudentLogin() {
   return (
     <div className="w-full min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-orange-50 to-white">
-
+      
       <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
+
+        {/* LOGO */}
+        <div className="flex justify-center mb-4">
+          <Image
+            src="/logo.png"
+            alt="logo"
+            width={112}
+            height={112}
+            priority
+          />
+        </div>
+
+        {/* TITLE */}
         <h2 className="text-3xl font-bold text-center">
           Student <span className="text-orange-500">Login</span>
         </h2>
@@ -13,6 +27,7 @@ export default function StudentLogin() {
           Access your learning dashboard
         </p>
 
+        {/* FORM */}
         <form className="mt-8 space-y-5">
           <input
             type="email"
@@ -31,6 +46,7 @@ export default function StudentLogin() {
           </button>
         </form>
 
+        {/* FOOT NOTE */}
         <p className="mt-6 text-center text-sm text-gray-500">
           Forgot password? Contact admin.
         </p>
